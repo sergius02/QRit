@@ -1,0 +1,100 @@
+# Spanish translations for com.github.sergius02.qrit package.
+# Copyright (C) 2020 THE com.github.sergius02.qrit'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.qrit package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.qrit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-08 17:43+0200\n"
+"PO-Revision-Date: 2020-09-08 16:10+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/Application.vala:52 data/com.github.sergius02.qrit.appdata.xml.in:7
+#: data/com.github.sergius02.qrit.desktop.in:4
+msgid "QRit"
+msgstr ""
+
+#: src/QRitUtils.vala:24
+msgid "You must enter a content to that QR!"
+msgstr "¡Debes introducir algun valor a ese QR!"
+
+#: src/QRitUtils.vala:37
+msgid "QR saved at your home directory"
+msgstr "QR guardado en tu carpeta personal"
+
+#: src/QRitUtils.vala:40
+msgid "You must give an awesome name to that QR!"
+msgstr "Debes darle un nombre a ese increible QR!"
+
+#: src/QRitUtils.vala:49
+msgid "Your QR is in your clipboard now!"
+msgstr "Tu QR esta ya en tu portapapeles"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:8
+msgid "QR codes creator"
+msgstr "Generador de códigos QR"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:10
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
+msgstr "¡Crea fantásticos códigos QR con QRit!"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:15
+msgid "Sergio Fernández Celorio"
+msgstr "Sergio Fernández Celorio"
+
+#: data/com.github.sergius02.qrit.desktop.in:6
+msgid "QR codes generator"
+msgstr "Generador de códigos QR"
+
+#: data/com.github.sergius02.qrit.desktop.in:8
+msgid "com.github.sergius02.qrit"
+msgstr "com.github.sergius02.qrit"
+
+#: data/com.github.sergius02.qrit.desktop.in:11
+msgid "Utility"
+msgstr "Utilidades"
+
+#: resources/ui/qrit.glade:44
+msgid "Use the text field above to create a new awesome QR code 🤖️"
+msgstr "Usa el campo de texto de arriba para crear un código QR increible 🤖️"
+
+#: resources/ui/qrit.glade:83
+msgid "Awesome_QR.png"
+msgstr "QR_Increible.png"
+
+#: resources/ui/qrit.glade:107 resources/ui/qrit.glade:120
+msgid "Background"
+msgstr "Fondo"
+
+#: resources/ui/qrit.glade:145
+msgid "Foreground"
+msgstr "Color"
+
+#: resources/ui/qrit.glade:158
+msgid "QR color"
+msgstr "Color del código QR"
+
+#: resources/ui/qrit.glade:176
+msgid "Regenerate it!"
+msgstr "Regenerar!"
+
+#: resources/ui/qrit.glade:209
+msgid "Copy QR"
+msgstr "Copiar QR"
+
+#: resources/ui/qrit.glade:224
+msgid "Save QR"
+msgstr "Guardar QR"
+
+#: resources/ui/qrit.glade:293
+msgid "Fork me on Github!"
+msgstr "Fork me on Github!"

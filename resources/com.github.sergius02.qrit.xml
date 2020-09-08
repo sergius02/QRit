@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/sergius02/qrit/">
+    <file>ui/qrit.glade</file>
+    
+    <file>icons/icon_clipboard.svg</file>
+    <file>icons/icon_github.svg</file>
+    <file>icons/icon_play.svg</file>
+    <file>icons/icon_save.svg</file>
+    <file>icons/icon_share.svg</file>
+    <file>icons/icon_qr.svg</file>
+    <file>icons/icon_qr18.svg</file>
+  </gresource>
+</gresources>

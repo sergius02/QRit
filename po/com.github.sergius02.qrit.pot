@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.qrit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.qrit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-08 17:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Application.vala:52 data/com.github.sergius02.qrit.appdata.xml.in:7
+#: data/com.github.sergius02.qrit.desktop.in:4
+msgid "QRit"
+msgstr ""
+
+#: src/QRitUtils.vala:24
+msgid "You must enter a content to that QR!"
+msgstr ""
+
+#: src/QRitUtils.vala:37
+msgid "QR saved at your home directory"
+msgstr ""
+
+#: src/QRitUtils.vala:40
+msgid "You must give an awesome name to that QR!"
+msgstr ""
+
+#: src/QRitUtils.vala:49
+msgid "Your awesome QR is in your clipboard now!"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:8
+msgid "QR codes creator"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:10
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:15
+msgid "Sergio Fernández Celorio"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.desktop.in:6
+msgid "QR codes generator"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.desktop.in:8
+msgid "com.github.sergius02.qrit"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.desktop.in:11
+msgid "Utility"
+msgstr ""
+
+#: resources/ui/qrit.glade:44
+msgid "Use the text field above to create a new awesome QR code 🤖️"
+msgstr ""
+
+#: resources/ui/qrit.glade:83
+msgid "Awesome_QR.png"
+msgstr ""
+
+#: resources/ui/qrit.glade:107 resources/ui/qrit.glade:120
+msgid "Background"
+msgstr ""
+
+#: resources/ui/qrit.glade:145
+msgid "Foreground"
+msgstr ""
+
+#: resources/ui/qrit.glade:158
+msgid "QR color"
+msgstr ""
+
+#: resources/ui/qrit.glade:176
+msgid "Regenerate it!"
+msgstr ""
+
+#: resources/ui/qrit.glade:209
+msgid "Copy QR"
+msgstr ""
+
+#: resources/ui/qrit.glade:224
+msgid "Save QR"
+msgstr ""
+
+#: resources/ui/qrit.glade:293
+msgid "Fork me on Github!"
+msgstr ""

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=QRit
+Comment=Create awesome QR codes with QRit!
+GenericName=QR codes generator
+Exec=com.github.sergius02.qrit %U
+Icon=com.github.sergius02.qrit
+Terminal=false
+Categories=Utility;GTK;
+Keywords=Utility
