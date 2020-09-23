@@ -8,16 +8,32 @@
   <summary>QR codes creator</summary>
   <description>
     <p>Create awesome QR codes with QRit!</p>
+    <p>With QRit you can create awesome QR codes, you can change the background and foreground color to help you integrate them in any place.</p>
+    <p>This application use the incredible qrencode</p>
   </description>
   <provides>
     <binary>com.github.sergius02.qrit</binary>
   </provides>
   <developer_name>Sergio Fernández Celorio</developer_name>
-  <url type="homepage"></url>
+  <url type="homepage">https://github.com/sergius02/QRit</url>
   <url type="bugtracker">https://github.com/sergius02/QRit/issues</url>
   <url type="help">https://github.com/sergius02/QRit/issues</url>
   <screenshots>
     <screenshot type="default">
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/QRit/master/screenshots/QRit.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/QRit/master/screenshots/QRit2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/QRit/master/screenshots/QRit3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Normal variant</caption>
+      <image>https://raw.githubusercontent.com/sergius02/QRit/master/screenshots/QRit4.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
@@ -49,7 +65,12 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+  <custom>
+    <value key="x-appcenter-color-primary">#5D6D7E</value>
+    <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+    <value key="x-appcenter-suggested-price">0</value>
+  </custom>
   <releases>
-    <rel8ease version="0.0.1" date="2020-01-01"/>
+    <release version="1.0.2" date="2020-01-01"/>
   </releases>
 </component>
