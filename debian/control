@@ -1,0 +1,13 @@
+Source: com.github.sergius02.qrit
+Section: x11
+Priority: optional
+Maintainer: Sergio Fernández Celorio <scelorio1990@gmail.com>
+Build-Depends: libgtk-3-dev,
+               valac (>= 0.40.0),
+               qrencode
+Standards-Version: 3.9.3
+
+Package: com.github.sergius02.qrit
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Create awesome QR codes with QRit!
