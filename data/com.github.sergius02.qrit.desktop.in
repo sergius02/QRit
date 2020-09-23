@@ -6,5 +6,5 @@ GenericName=QR codes generator
 Exec=com.github.sergius02.qrit %U
 Icon=com.github.sergius02.qrit
 Terminal=false
-Categories=Utility;GTK;
-Keywords=Utility
+Categories=Utility;GTK;Network;Development;
+Keywords=Utility;GTK;Network;Development;QR;

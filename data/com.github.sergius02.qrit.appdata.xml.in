@@ -11,6 +11,12 @@
     <p>With QRit you can create awesome QR codes, you can change the background and foreground color to help you integrate them in any place.</p>
     <p>This application use the incredible qrencode</p>
   </description>
+  <categories>
+​    <category>GTK</category>
+​    <category>Utility</category>
+    <category>Development</category>
+    <category>Network</category>
+  </categories>
   <provides>
     <binary>com.github.sergius02.qrit</binary>
   </provides>
