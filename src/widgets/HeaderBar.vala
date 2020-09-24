@@ -10,6 +10,10 @@ public class QRit.HeaderBar {
         this.button_contenttoqr.clicked.connect (() => {
             QRit.QRitUtils.generateQR (application);
         });
+
+        this.entry_contenttoqr.activate.connect (() => {
+            QRitUtils.generateQR (application);
+        });
     }
 
     private void generateUI (Gtk.Builder builder) {
