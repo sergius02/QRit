@@ -1,10 +1,10 @@
 public class QRit.QRitUtils {
 
     public static void generateQR (QRit.Application application) {
-        string qrContent = application.entry_contenttoqr.get_text ();
+        string qrContent = application.window.headerBar.entry_contenttoqr.get_text ();
         if (qrContent != "") {
-            string backgroundHex = QRit.QRitUtils.toHex (application.background);
-            string foregroundHex = QRit.QRitUtils.toHex (application.foreground);
+            string backgroundHex = QRit.QRitUtils.toHex (application.window.background);
+            string foregroundHex = QRit.QRitUtils.toHex (application.window.foreground);
 
             string command = "qrencode "; // Base command
             command += " -s 6"; // QR image size
@@ -15,11 +15,11 @@ public class QRit.QRitUtils {
             command += qrContent; // QR content
             executeCommand (command);
 
-            application.label_tutorialtext.visible = false;
+            application.window.label_tutorialtext.visible = false;
             
-            application.image_qr.set_from_file (application.cacheFolder + "/Awesome_QR.png");
+            application.window.image_qr.set_from_file (application.cacheFolder + "/Awesome_QR.png");
 
-            application.revealer_qr.reveal_child = true;
+            application.window.revealer_qr.reveal_child = true;
         } else {
             application.notification.set_body (_("You must enter a content to that QR!"));
             application.send_notification ("com.github.sergius02.qrit", application.notification);
@@ -27,7 +27,7 @@ public class QRit.QRitUtils {
     }
 
     public static void saveQR (QRit.Application application) {
-        string fileName = application.entry_nameqr.get_text ();
+        string fileName = application.window.entry_nameqr.get_text ();
         if (fileName != "") {
             if (!fileName.has_suffix (".png")) {
                 fileName += ".png"; 
