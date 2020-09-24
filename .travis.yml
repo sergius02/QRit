@@ -7,6 +7,11 @@ node_js:
 
 sudo: required
 
+branches:
+  only:
+  - master
+  - development
+
 services:
   - docker
 
