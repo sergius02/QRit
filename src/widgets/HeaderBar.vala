@@ -1,8 +1,8 @@
 public class QRit.HeaderBar {
 
-    public Gtk.Entry entry_contenttoqr { get; set; }
+    public Gtk.Entry entry_contenttoqr;
 
-    public Gtk.Button button_contenttoqr { get; set; }
+    public Gtk.Button button_contenttoqr;
 
     public HeaderBar (QRit.Application application) {
         generateUI (application.builder);

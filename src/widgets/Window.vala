@@ -3,22 +3,22 @@ public class QRit.Window {
     public Gtk.ApplicationWindow applicationWindow;
     public QRit.HeaderBar headerBar;
 
-    public Gdk.RGBA background { get; set; }
-    public Gdk.RGBA foreground { get; set; }
+    public Gdk.RGBA background;
+    public Gdk.RGBA foreground;
 
-    public Gtk.Entry entry_nameqr { get; set; }
+    public Gtk.Entry entry_nameqr;
 
-    public Gtk.Label label_tutorialtext { get; set; }
+    public Gtk.Label label_tutorialtext;
 
-    public Gtk.Revealer revealer_qr { get; set; }
+    public Gtk.Revealer revealer_qr;
 
-    public Gtk.Image image_qr { get; set; }
+    public Gtk.Image image_qr;
 
-    public Gtk.Button button_copy { get; set; }
-    public Gtk.Button button_save { get; set; }
+    public Gtk.Button button_copy;
+    public Gtk.Button button_save;
 
-    public Gtk.ColorButton colorbutton_background { get; set; }
-    public Gtk.ColorButton colorbutton_foreground { get; set; }
+    public Gtk.ColorButton colorbutton_background;
+    public Gtk.ColorButton colorbutton_foreground;
 
     public Window (QRit.Application application) {
         generateUI (application.builder);

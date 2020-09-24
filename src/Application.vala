@@ -1,9 +1,9 @@
 public class QRit.Application : Gtk.Application {
 
-    public Gtk.Builder builder { get; set; }
-    public Gtk.Clipboard clipboard { get; set; }
-    public Notification notification { get; set; }
-    public string cacheFolder { get; set; }
+    public Gtk.Builder builder;
+    public Gtk.Clipboard clipboard;
+    public Notification notification;
+    public string cacheFolder;
 
     public QRit.Window window;
 
