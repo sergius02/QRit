@@ -16,7 +16,6 @@ public class QRit.Window {
 
     public Gtk.Button button_copy { get; set; }
     public Gtk.Button button_save { get; set; }
-    public Gtk.Button button_regenerate { get; set; }
 
     public Gtk.ColorButton colorbutton_background { get; set; }
     public Gtk.ColorButton colorbutton_foreground { get; set; }
@@ -29,11 +28,12 @@ public class QRit.Window {
 
         this.colorbutton_background.color_set.connect (() => {
             this.background = this.colorbutton_background.get_rgba ();
+
+            QRit.QRitUtils.generateQR (application);
         });
         this.colorbutton_foreground.color_set.connect (() => {
             this.foreground = this.colorbutton_foreground.get_rgba ();
-        });
-        this.button_regenerate.clicked.connect (() => {
+
             QRit.QRitUtils.generateQR (application);
         });
 
@@ -57,7 +57,6 @@ public class QRit.Window {
 
         this.button_copy = builder.get_object ("button_copy") as Gtk.Button;
         this.button_save = builder.get_object ("button_save") as Gtk.Button;
-        this.button_regenerate = builder.get_object ("button_regenerate") as Gtk.Button;
 
         this.colorbutton_background = builder.get_object ("colorbutton_background") as Gtk.ColorButton;
         this.colorbutton_foreground = builder.get_object ("colorbutton_foreground") as Gtk.ColorButton;
