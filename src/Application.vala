@@ -25,6 +25,11 @@ public class QRit.Application : Gtk.Application {
     public Gtk.ColorButton colorbutton_background { get; set; }
     public Gtk.ColorButton colorbutton_foreground { get; set; }
 
+    public static int main (string[] args) {
+        var app = new QRit.Application ();
+        return app.run (args);
+    }
+
     public Application () {
         Object (
             application_id: "com.github.sergius02.qrit",

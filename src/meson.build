@@ -1,6 +1,5 @@
 # Listing files to compile
 sources = files (
-    'Main.vala',
     'Application.vala',
     'QRitUtils.vala',
     
