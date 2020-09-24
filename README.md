@@ -3,6 +3,8 @@
 </p>
 <h1 align="center">QRit</h1>
 
+[![Build Status](https://travis-ci.org/sergius02/QRit.svg?branch=master)](https://travis-ci.org/sergius02/QRit)
+
 ----------
 
 |![alt](screenshots/QRit.png) |![alt](screenshots/QRit2.png)|
