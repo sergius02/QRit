@@ -77,6 +77,6 @@
     <value key="x-appcenter-suggested-price">0</value>
   </custom>
   <releases>
-    <release version="1.0.2" date="2020-01-01"/>
+    <release version="1.0.3" date="2020-09-23"/>
   </releases>
 </component>
