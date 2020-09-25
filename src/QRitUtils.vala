@@ -1,5 +1,13 @@
+/**
+* This class helps the UI with the generation of the QR
+*/
 public class QRit.QRitUtils {
 
+    /**
+    * Generate the QR and store it in the cache folder.
+    *
+    * It takes the foreground and background from the Application
+    */
     public static void generateQR (QRit.Application application) {
         string qrContent = application.window.headerBar.entry_contenttoqr.get_text ();
         if (qrContent != "") {
@@ -16,9 +24,7 @@ public class QRit.QRitUtils {
             executeCommand (command);
 
             application.window.label_tutorialtext.visible = false;
-            
             application.window.image_qr.set_from_file (application.cacheFolder + "/Awesome_QR.png");
-
             application.window.revealer_qr.reveal_child = true;
         } else {
             application.notification.set_body (_("You must enter a content to that QR!"));
@@ -26,6 +32,9 @@ public class QRit.QRitUtils {
         }
     }
 
+    /** 
+    * Save the QR to the $HOME folder
+    */
     public static void saveQR (QRit.Application application) {
         string fileName = application.window.entry_nameqr.get_text ();
         if (fileName != "") {
@@ -42,6 +51,9 @@ public class QRit.QRitUtils {
         }
     }
 
+    /**
+    * Copy the QR to the clipboard
+    */
     public static void copyQR (QRit.Application application) {
         try {
             Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file (application.cacheFolder + "/Awesome_QR.png");
@@ -53,6 +65,9 @@ public class QRit.QRitUtils {
         }
     }
     
+    /**
+    * Auxiliar method to execute commands
+    */
     private static void executeCommand (string command) {
         try {
             Process.spawn_command_line_sync (command);
@@ -61,6 +76,9 @@ public class QRit.QRitUtils {
         }
     }
 
+    /**
+    * Convert RGBA to HEX format
+    */
     private static string toHex (Gdk.RGBA rgba) {
         return "%02x%02x%02x"
             .printf((uint) (rgba.red * 255),
