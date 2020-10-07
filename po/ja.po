@@ -1,0 +1,116 @@
+# Japanese translations for com.github.sergius02.qrit package.
+# Copyright (C) 2020 THE com.github.sergius02.qrit'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.qrit package.
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.qrit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-07 10:38+0900\n"
+"PO-Revision-Date: 2020-10-07 10:50+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:7
+#: data/com.github.sergius02.qrit.desktop.in:4 src/Application.vala:24
+msgid "QRit"
+msgstr "QRit"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:8
+msgid "QR codes creator"
+msgstr "QR コードを作成します"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:10
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
+msgstr "QRit で QR コードを作成しましょう！"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:11
+msgid ""
+"With QRit you can create awesome QR codes, you can change the background and "
+"foreground color to help you integrate them in any place."
+msgstr ""
+"QRit を使用すれば、QR コードを作成したり、使用場所にマッチするように背景色や"
+"コードの色を変更したりできます。"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:12
+msgid "This application use the incredible qrencode"
+msgstr "このアプリケーションは qrencode を使用しています"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:23
+msgid "Sergio Fernández Celorio"
+msgstr "Sergio Fernández Celorio"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:29
+#: data/com.github.sergius02.qrit.appdata.xml.in:33
+#: data/com.github.sergius02.qrit.appdata.xml.in:37
+#: data/com.github.sergius02.qrit.appdata.xml.in:41
+msgid "Normal variant"
+msgstr "QR コードの色の例"
+
+#: data/com.github.sergius02.qrit.desktop.in:6
+msgid "QR codes generator"
+msgstr "QR コード生成ツール"
+
+#: data/com.github.sergius02.qrit.desktop.in:8
+msgid "com.github.sergius02.qrit"
+msgstr "com.github.sergius02.qrit"
+
+#: data/com.github.sergius02.qrit.desktop.in:11
+msgid "Utility;GTK;Network;Development;QR;"
+msgstr "Utility;GTK;Network;Development;QR;ユーティリティー;ネットワーク;開発;"
+
+#: resources/ui/qrit.glade:39
+msgid "Use the text field above to create a new awesome QR code 🤖️"
+msgstr ""
+"新しい QR コードを作成するには、上のテキストフィールドを使用してください 🤖️"
+
+#: resources/ui/qrit.glade:78
+msgid "Awesome_QR.png"
+msgstr "Awesome_QR.png"
+
+#: resources/ui/qrit.glade:102 resources/ui/qrit.glade:115
+msgid "Background"
+msgstr "背景色"
+
+#: resources/ui/qrit.glade:140
+msgid "Foreground"
+msgstr "QR コードの色"
+
+#: resources/ui/qrit.glade:153
+msgid "QR color"
+msgstr "QR コードの色を選択"
+
+#: resources/ui/qrit.glade:188
+msgid "Copy QR"
+msgstr "QR コードをコピー"
+
+#: resources/ui/qrit.glade:203
+msgid "Save QR"
+msgstr "QR コードを保存"
+
+#: resources/ui/qrit.glade:272
+msgid "Fork me on Github!"
+msgstr "GitHub でフォーク"
+
+#: src/QRitUtils.vala:24
+msgid "You must enter a content to that QR!"
+msgstr "QR コードの内容を入力してください！"
+
+#: src/QRitUtils.vala:37
+msgid "QR saved at your home directory"
+msgstr "QR コードをホームディレクトリーに保存しました"
+
+#: src/QRitUtils.vala:40
+msgid "You must give an awesome name to that QR!"
+msgstr "QR コードに名前を付けてください！"
+
+#: src/QRitUtils.vala:49
+msgid "Your QR is in your clipboard now!"
+msgstr "QR コードをコピーしました！"
