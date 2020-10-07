@@ -1,8 +1,7 @@
-src/Main.vala
+data/com.github.sergius02.qrit.appdata.xml.in
+data/com.github.sergius02.qrit.desktop.in
+resources/ui/qrit.glade
 src/Application.vala
 src/QRitUtils.vala
 src/widgets/HeaderBar.vala
 src/widgets/Window.vala
-data/com.github.sergius02.qrit.appdata.xml.in
-data/com.github.sergius02.qrit.desktop.in
-resources/ui/qrit.glade
