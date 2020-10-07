@@ -37,18 +37,17 @@ public class QRit.QRitUtils {
     */
     public static void saveQR (QRit.Application application) {
         string fileName = application.window.entry_nameqr.get_text ();
-        if (fileName != "") {
-            if (!fileName.has_suffix (".png")) {
-                fileName += ".png"; 
-            }
-            string command = "cp " + application.cacheFolder + "/Awesome_QR.png " + GLib.Environment.get_home_dir() + "/" + fileName;
-            executeCommand (command);
-            application.notification.set_body (_("QR saved at your home directory"));
-            application.send_notification ("com.github.sergius02.qrit", application.notification);
-        } else {
-            application.notification.set_body (_("You must give an awesome name to that QR!"));
-            application.send_notification ("com.github.sergius02.qrit", application.notification);
+        if (fileName == "") {
+            fileName = "Awesome_QR.png";
         }
+
+        if (!fileName.has_suffix (".png")) {
+            fileName += ".png"; 
+        }
+        string command = "cp " + application.cacheFolder + "/Awesome_QR.png " + GLib.Environment.get_home_dir() + "/" + fileName;
+        executeCommand (command);
+        application.notification.set_body (_("QR saved at your home directory"));
+        application.send_notification ("com.github.sergius02.qrit", application.notification);
     }
 
     /**
