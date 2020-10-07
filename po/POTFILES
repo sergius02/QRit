@@ -1,6 +1,7 @@
 data/com.github.sergius02.qrit.appdata.xml.in
 data/com.github.sergius02.qrit.desktop.in
-resources/ui/qrit.glade
+resources/ui/headerbar.ui
+resources/ui/qrit.ui
 src/Application.vala
 src/QRitUtils.vala
 src/widgets/HeaderBar.vala

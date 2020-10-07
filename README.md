@@ -3,7 +3,9 @@
 </p>
 <h1 align="center">QRit</h1>
 
-[![Build Status](https://travis-ci.org/sergius02/QRit.svg?branch=master)](https://travis-ci.org/sergius02/QRit)
+![Last Release](https://img.shields.io/github/v/release/sergius02/QRit?include_prereleases&style=for-the-badge)
+![Build Status](https://img.shields.io/travis/sergius02/QRit/master?style=for-the-badge)
+![License](https://img.shields.io/github/license/sergius02/QRit?style=for-the-badge)
 
 ----------
 

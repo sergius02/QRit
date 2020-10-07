@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/sergius02/qrit/">
-    <file>ui/qrit.glade</file>
+    <file>ui/qrit.ui</file>
+    <file>ui/headerbar.ui</file>
     
     <file>icons/icon_clipboard.svg</file>
     <file>icons/icon_github.svg</file>

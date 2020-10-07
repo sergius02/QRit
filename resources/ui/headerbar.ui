@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.39.0 -->
+<interface>
+  <requires lib="gtk+" version="3.22"/>
+  <template class="QRitHeaderBar" parent="GtkHeaderBar">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="has-subtitle">False</property>
+    <property name="show-close-button">True</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkEntry" id="entry_contenttoqr">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="valign">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_contenttoqr">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image_q</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLinkButton">
+        <property name="label" translatable="yes">Fork me on Github!</property>
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="receives-default">True</property>
+        <property name="image">image_github</property>
+        <property name="relief">none</property>
+        <property name="always-show-image">True</property>
+        <property name="uri">https://github.com/sergius02/QRit</property>
+      </object>
+      <packing>
+        <property name="pack-type">end</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </template>
+  <object class="GtkImage" id="image_github">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/qrit/icons/icon_github.svg</property>
+  </object>
+  <object class="GtkImage" id="image_q">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/qrit/icons/icon_qr.svg</property>
+  </object>
+</interface>

@@ -3,12 +3,11 @@
 */
 public class QRit.Application : Gtk.Application {
 
-    public Gtk.Builder builder;
     public Gtk.Clipboard clipboard;
     public Notification notification;
     public string cacheFolder;
 
-    public QRit.Window window;
+    public QRit.ApplicationWindow window;
 
     public static int main (string[] args) {
         var app = new QRit.Application ();
@@ -23,17 +22,14 @@ public class QRit.Application : Gtk.Application {
     }
 
     protected override void activate () {
-        this.builder = new Gtk.Builder.from_resource ("/com/github/sergius02/qrit/ui/qrit.glade");
         this.notification = new Notification (_("QRit"));
         createCacheFolder ();
-
-        builder.set_application (this);
         
-        this.window = new QRit.Window (this);
-        this.clipboard = Gtk.Clipboard.get_for_display (this.window.applicationWindow.get_display (), Gdk.SELECTION_CLIPBOARD);
+        this.window = new QRit.ApplicationWindow (this);
+        this.clipboard = Gtk.Clipboard.get_for_display (this.window.get_display (), Gdk.SELECTION_CLIPBOARD);
 
-        add_window (window.applicationWindow);
-        window.applicationWindow.show_all ();
+        add_window (window);
+        window.show_all ();
     }
 
     /**

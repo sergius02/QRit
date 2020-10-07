@@ -1,33 +1,42 @@
 /**
 * The Window and all it components
 */
-public class QRit.Window {
+[GtkTemplate (ui = "/com/github/sergius02/qrit/ui/qrit.ui")]
+public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
 
-    public Gtk.ApplicationWindow applicationWindow;
     public QRit.HeaderBar headerBar;
 
     public Gdk.RGBA background;
     public Gdk.RGBA foreground;
 
+    [GtkChild]
     public Gtk.Entry entry_nameqr;
 
+    [GtkChild]
     public Gtk.Label label_tutorialtext;
 
+    [GtkChild]
     public Gtk.Revealer revealer_qr;
 
+    [GtkChild]
     public Gtk.Image image_qr;
 
+    [GtkChild]
     public Gtk.Button button_copy;
+
+    [GtkChild]
     public Gtk.Button button_save;
 
+    [GtkChild]
     public Gtk.ColorButton colorbutton_background;
+
+    [GtkChild]
     public Gtk.ColorButton colorbutton_foreground;
 
-    public Window (QRit.Application application) {
-        generateUI (application.builder);
+    public ApplicationWindow (QRit.Application application) {
         
-        this.applicationWindow = application.builder.get_object ("main_window") as Gtk.ApplicationWindow;
         this.headerBar = new QRit.HeaderBar (application);
+        this.set_titlebar (headerBar);
 
         // The buttons functionallity
         this.colorbutton_background.color_set.connect (() => {
@@ -49,25 +58,6 @@ public class QRit.Window {
         this.button_save.clicked.connect (() => {
             QRit.QRitUtils.saveQR (application);
         });
-    }
-
-    /**
-    * Initialize the main window components from the .glade
-    */
-    private void generateUI (Gtk.Builder builder) {
-        this.entry_nameqr = builder.get_object ("entry_nameqr") as Gtk.Entry;
-
-        this.label_tutorialtext = builder.get_object ("label_tutorialtext") as Gtk.Label;
-
-        this.revealer_qr = builder.get_object ("revealer_qr") as Gtk.Revealer;
-
-        this.image_qr = builder.get_object ("image_qr") as Gtk.Image;
-
-        this.button_copy = builder.get_object ("button_copy") as Gtk.Button;
-        this.button_save = builder.get_object ("button_save") as Gtk.Button;
-
-        this.colorbutton_background = builder.get_object ("colorbutton_background") as Gtk.ColorButton;
-        this.colorbutton_foreground = builder.get_object ("colorbutton_foreground") as Gtk.ColorButton;
 
         this.background = this.colorbutton_background.get_rgba ();
         this.foreground = this.colorbutton_foreground.get_rgba ();
