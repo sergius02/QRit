@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Sergio Fernández Celorio <scelorio1990@gmail.com>
 Build-Depends: libgtk-3-dev,
                valac (>= 0.40.0),
-               qrencode,
                cmake (>= 2.8),
                meson,
                debhelper (>= 9)
@@ -12,5 +11,5 @@ Standards-Version: 3.9.3
 
 Package: com.github.sergius02.qrit
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, qrencode
 Description: Create awesome QR codes with QRit!
