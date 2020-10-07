@@ -1,3 +1,6 @@
+/**
+* The main class of the application
+*/
 public class QRit.Application : Gtk.Application {
 
     public Gtk.Builder builder;
@@ -33,6 +36,9 @@ public class QRit.Application : Gtk.Application {
         window.applicationWindow.show_all ();
     }
 
+    /**
+    * This method creates the cache folder $HOME/.cache where QRit stores the QR generated
+    */
     private string createCacheFolder () {
         this.cacheFolder = GLib.Path.build_filename (GLib.Environment.get_user_cache_dir (), application_id);
         try {

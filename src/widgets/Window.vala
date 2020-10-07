@@ -1,3 +1,6 @@
+/**
+* The Window and all it components
+*/
 public class QRit.Window {
 
     public Gtk.ApplicationWindow applicationWindow;
@@ -26,15 +29,17 @@ public class QRit.Window {
         this.applicationWindow = application.builder.get_object ("main_window") as Gtk.ApplicationWindow;
         this.headerBar = new QRit.HeaderBar (application);
 
+        // The buttons functionallity
         this.colorbutton_background.color_set.connect (() => {
             this.background = this.colorbutton_background.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application);
+            QRit.QRitUtils.generateQR (application); // Automatically regenerate the QR
         });
+        
         this.colorbutton_foreground.color_set.connect (() => {
             this.foreground = this.colorbutton_foreground.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application);
+            QRit.QRitUtils.generateQR (application); // Automatically regenerate the QR
         });
 
         this.button_copy.clicked.connect (() => {
@@ -46,6 +51,9 @@ public class QRit.Window {
         });
     }
 
+    /**
+    * Initialize the main window components from the .glade
+    */
     private void generateUI (Gtk.Builder builder) {
         this.entry_nameqr = builder.get_object ("entry_nameqr") as Gtk.Entry;
 
