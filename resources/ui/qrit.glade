@@ -235,6 +235,7 @@
       <object class="GtkHeaderBar">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
+        <property name="has-subtitle">False</property>
         <property name="show-close-button">True</property>
         <child>
           <object class="GtkBox">
