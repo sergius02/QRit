@@ -45,6 +45,11 @@ ninja
 sudo ninja install
 ```
 
+Important
+>
+>For the file QR generation, the limit is approximately 3KB
+
+
 ## Credits
 
 * [qrencode](https://github.com/fukuchi/libqrencode)
