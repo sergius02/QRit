@@ -2,6 +2,22 @@
 <!-- Generated with glade 3.39.0 -->
 <interface>
   <requires lib="gtk+" version="3.22"/>
+  <object class="GtkImage" id="image_github">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/qrit/icons/icon_github.svg</property>
+  </object>
+  <object class="GtkImage" id="image_openfile">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">document-open-symbolic</property>
+    <property name="icon_size">3</property>
+  </object>
+  <object class="GtkImage" id="image_q">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="resource">/com/github/sergius02/qrit/icons/icon_qr.svg</property>
+  </object>
   <template class="QRitHeaderBar" parent="GtkHeaderBar">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
@@ -37,6 +53,19 @@
             <property name="position">1</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="button_openfile">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">image_openfile</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
       </object>
     </child>
     <child>
@@ -56,14 +85,4 @@
       </packing>
     </child>
   </template>
-  <object class="GtkImage" id="image_github">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="resource">/com/github/sergius02/qrit/icons/icon_github.svg</property>
-  </object>
-  <object class="GtkImage" id="image_q">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="resource">/com/github/sergius02/qrit/icons/icon_qr.svg</property>
-  </object>
 </interface>

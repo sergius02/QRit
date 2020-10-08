@@ -42,13 +42,13 @@ public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
         this.colorbutton_background.color_set.connect (() => {
             this.background = this.colorbutton_background.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application); // Automatically regenerate the QR
+            QRit.QRitUtils.generateQR (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
         });
         
         this.colorbutton_foreground.color_set.connect (() => {
             this.foreground = this.colorbutton_foreground.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application); // Automatically regenerate the QR
+            QRit.QRitUtils.generateQR (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
         });
 
         this.button_copy.clicked.connect (() => {

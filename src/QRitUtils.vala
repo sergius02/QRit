@@ -3,28 +3,32 @@
 */
 public class QRit.QRitUtils {
 
+    public static string qr_content;
+
     /**
     * Generate the QR and store it in the cache folder.
     *
     * It takes the foreground and background from the Application
     */
-    public static void generateQR (QRit.Application application) {
-        string qrContent = application.window.headerBar.entry_contenttoqr.get_text ();
-        if (qrContent != "") {
+    public static void generateQR (QRit.Application application, string qr_content) {
+        if (qr_content != "") {
+            QRit.QRitUtils.qr_content = qr_content;
             string backgroundHex = QRit.QRitUtils.toHex (application.window.background);
             string foregroundHex = QRit.QRitUtils.toHex (application.window.foreground);
+            
+            string[] command = {
+                "qrencode",                                         // Base command
+                "-o",application.cacheFolder + "/Awesome_QR.png",   // QR result path
+                "-s","6",                                           // QR image size
+                "-t","PNG",                                         // QR format image
+                "--foreground=" + foregroundHex,                    // QR foreground color
+                "--background=" + backgroundHex                     // QR background color
+            };
 
-            string command = "qrencode "; // Base command
-            command += " -s 6"; // QR image size
-            command += " -t PNG"; // QR format image
-            command += " --foreground=" + foregroundHex; // QR foreground color
-            command += " --background=" + backgroundHex; // QR background color
-            command += " -o " + application.cacheFolder + "/Awesome_QR.png "; // QR result path
-            command += qrContent; // QR content
-            executeCommand (command);
-
+            executeCommand (application, command);
+            
             application.window.label_tutorialtext.visible = false;
-            application.window.image_qr.set_from_file (application.cacheFolder + "/Awesome_QR.png");
+            
             application.window.revealer_qr.reveal_child = true;
         } else {
             application.notification.set_body (_("You must enter a content to that QR!"));
@@ -44,8 +48,13 @@ public class QRit.QRitUtils {
         if (!fileName.has_suffix (".png")) {
             fileName += ".png"; 
         }
-        string command = "cp " + application.cacheFolder + "/Awesome_QR.png " + GLib.Environment.get_home_dir() + "/" + fileName;
-        executeCommand (command);
+
+        string[] command_piped = {
+            "cp", application.cacheFolder + "/Awesome_QR.png", 
+            GLib.Environment.get_home_dir() + "/" + fileName
+        };
+
+        executeCommand (application, command_piped);
         application.notification.set_body (_("QR saved at your home directory"));
         application.send_notification ("com.github.sergius02.qrit", application.notification);
     }
@@ -67,12 +76,21 @@ public class QRit.QRitUtils {
     /**
     * Auxiliar method to execute commands
     */
-    private static void executeCommand (string command) {
+    private static void executeCommand (QRit.Application application, string[] command) {
+        int child_pid, standard_input, standard_output, standard_error;
         try {
-            Process.spawn_command_line_sync (command);
-        } catch (GLib.Error error) {
+            Process.spawn_async_with_pipes ("$HOME", command,Environ.get (), SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out child_pid,  out standard_input, out standard_output, out standard_error);
+        } catch (GLib.SpawnError error) {
             printerr (error.message);
         }
+
+        FileStream command_input = FileStream.fdopen (standard_input, "w");
+        command_input.write (qr_content.data);
+        ChildWatch.add (child_pid, (pid, status) => {
+            // Triggered when the child indicated by child_pid exits
+            Process.close_pid (pid);
+            application.window.image_qr.set_from_file (application.cacheFolder + "/Awesome_QR.png");
+        });
     }
 
     /**

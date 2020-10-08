@@ -3,6 +3,7 @@
   <gresource prefix="/com/github/sergius02/qrit/">
     <file>ui/qrit.ui</file>
     <file>ui/headerbar.ui</file>
+    <file>ui/file_chooser.ui</file>
     
     <file>icons/icon_clipboard.svg</file>
     <file>icons/icon_github.svg</file>

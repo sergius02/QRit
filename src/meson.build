@@ -4,5 +4,6 @@ sources = files (
     'QRitUtils.vala',
     
     'widgets/Window.vala',
-    'widgets/HeaderBar.vala'
+    'widgets/HeaderBar.vala',
+    'widgets/FileChooser.vala'
 )
