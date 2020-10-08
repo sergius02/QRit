@@ -13,7 +13,7 @@ public class QRit.FileChooser : Gtk.FileChooserDialog {
         file_filter.add_pattern ("*.html");
         file_filter.add_pattern ("*.css");
         file_filter.add_pattern ("*.js");
-        add_filter(file_filter);
+        add_filter (file_filter);
 
         button_filechooser_open.clicked.connect (() => {
             string result = "";
@@ -29,10 +29,10 @@ public class QRit.FileChooser : Gtk.FileChooserDialog {
             } catch (Error e) {
                 print ("Error: %s\n", e.message);
             }
-    
+
             dispose ();
 
-            QRitUtils.generateQR (application, result);
+            QRitUtils.generate_qr (application, result);
         });
 
         button_filechooser_close.clicked.connect (() => {

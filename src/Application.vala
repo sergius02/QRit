@@ -5,7 +5,7 @@ public class QRit.Application : Gtk.Application {
 
     public Gtk.Clipboard clipboard;
     public Notification notification;
-    public string cacheFolder;
+    public string cache_folder;
 
     public QRit.ApplicationWindow window;
 
@@ -23,8 +23,8 @@ public class QRit.Application : Gtk.Application {
 
     protected override void activate () {
         this.notification = new Notification (_("QRit"));
-        createCacheFolder ();
-        
+        create_cache_folder ();
+
         this.window = new QRit.ApplicationWindow (this);
         this.clipboard = Gtk.Clipboard.get_for_display (this.window.get_display (), Gdk.SELECTION_CLIPBOARD);
 
@@ -35,15 +35,15 @@ public class QRit.Application : Gtk.Application {
     /**
     * This method creates the cache folder $HOME/.cache where QRit stores the QR generated
     */
-    private string createCacheFolder () {
-        this.cacheFolder = GLib.Path.build_filename (GLib.Environment.get_user_cache_dir (), application_id);
+    private string create_cache_folder () {
+        this.cache_folder = GLib.Path.build_filename (GLib.Environment.get_user_cache_dir (), application_id);
         try {
-            File file = File.new_for_path (cacheFolder);
+            File file = File.new_for_path (cache_folder);
             if (!file.query_exists ()) {
                 file.make_directory ();
             }
 
-            return cacheFolder;
+            return cache_folder;
         } catch (Error e) {
             warning (e.message);
         }
@@ -51,4 +51,3 @@ public class QRit.Application : Gtk.Application {
         return "";
     }
 }
-

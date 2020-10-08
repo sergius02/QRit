@@ -4,7 +4,7 @@
 [GtkTemplate (ui = "/com/github/sergius02/qrit/ui/qrit.ui")]
 public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
 
-    public QRit.HeaderBar headerBar;
+    public QRit.HeaderBar header_bar;
 
     public Gdk.RGBA background;
     public Gdk.RGBA foreground;
@@ -34,29 +34,28 @@ public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
     public Gtk.ColorButton colorbutton_foreground;
 
     public ApplicationWindow (QRit.Application application) {
-        
-        this.headerBar = new QRit.HeaderBar (application);
-        this.set_titlebar (headerBar);
+        this.header_bar = new QRit.HeaderBar (application);
+        this.set_titlebar (header_bar);
 
         // The buttons functionallity
         this.colorbutton_background.color_set.connect (() => {
             this.background = this.colorbutton_background.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
+            QRit.QRitUtils.generate_qr (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
         });
-        
+
         this.colorbutton_foreground.color_set.connect (() => {
             this.foreground = this.colorbutton_foreground.get_rgba ();
 
-            QRit.QRitUtils.generateQR (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
+            QRit.QRitUtils.generate_qr (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
         });
 
         this.button_copy.clicked.connect (() => {
-            QRit.QRitUtils.copyQR (application);
+            QRit.QRitUtils.copy_qr (application);
         });
 
         this.button_save.clicked.connect (() => {
-            QRit.QRitUtils.saveQR (application);
+            QRit.QRitUtils.save_qr (application);
         });
 
         this.background = this.colorbutton_background.get_rgba ();
