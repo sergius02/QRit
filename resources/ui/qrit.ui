@@ -107,7 +107,7 @@
                               <item id="ansi256" translatable="yes">ansi256</item>
                               <item id="ascii" translatable="yes">ascii</item>
                               <item id="asciii" translatable="yes">asciii</item>
-                              <item id="utf8" translatable="yes">uft8</item>
+                              <item id="utf8" translatable="yes">utf8</item>
                               <item id="ansiutf8" translatable="yes">ansiutf8</item>
                             </items>
                           </object>
