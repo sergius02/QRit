@@ -47,7 +47,7 @@ public class QRit.QRitUtils {
         if (file_name == "") {
             file_name = "Awesome_QR.";
         }
-        file_name += file_extension;
+        file_name += "." + file_extension;
 
         string[] command_piped = {
             "cp", application.cache_folder + "/Awesome_QR." + file_extension,
