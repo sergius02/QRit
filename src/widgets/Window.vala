@@ -13,6 +13,9 @@ public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
     public Gtk.Entry entry_nameqr;
 
     [GtkChild]
+    public Gtk.ComboBoxText combobox_formats;
+
+    [GtkChild]
     public Gtk.Label label_tutorialtext;
 
     [GtkChild]
@@ -33,6 +36,9 @@ public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
     [GtkChild]
     public Gtk.ColorButton colorbutton_foreground;
 
+    [GtkChild]
+    public Gtk.Label label_warning_preview;
+
     public ApplicationWindow (QRit.Application application) {
         this.header_bar = new QRit.HeaderBar (application);
         this.set_titlebar (header_bar);
@@ -47,6 +53,10 @@ public class QRit.ApplicationWindow : Gtk.ApplicationWindow {
         this.colorbutton_foreground.color_set.connect (() => {
             this.foreground = this.colorbutton_foreground.get_rgba ();
 
+            QRit.QRitUtils.generate_qr (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
+        });
+
+        this.combobox_formats.changed.connect (() => {
             QRit.QRitUtils.generate_qr (application, QRit.QRitUtils.qr_content); // Automatically regenerate the QR
         });
 

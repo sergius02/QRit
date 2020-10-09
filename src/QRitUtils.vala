@@ -4,6 +4,7 @@
 public class QRit.QRitUtils {
 
     public static string qr_content;
+    public static string file_extension;
 
     /**
     * Generate the QR and store it in the cache folder.
@@ -13,16 +14,18 @@ public class QRit.QRitUtils {
     public static void generate_qr (QRit.Application application, string qr_content) {
         if (qr_content != "") {
             QRit.QRitUtils.qr_content = qr_content;
+            QRit.QRitUtils.file_extension = application.window.combobox_formats.get_active_text ();
             string background_hex = QRit.QRitUtils.to_hex (application.window.background);
             string foregroun_hex = QRit.QRitUtils.to_hex (application.window.foreground);
-
+            
+            string cached_file = application.cache_folder + "/Awesome_QR." + file_extension;
             string[] command = {
-                "qrencode",                                         // Base command
-                "-o", application.cache_folder + "/Awesome_QR.png", // QR result path
-                "-s", "6",                                          // QR image size
-                "-t", "PNG",                                        // QR format image
-                "--foreground=" + foregroun_hex,                    // QR foreground color
-                "--background=" + background_hex                    // QR background color
+                "qrencode",                         // Base command
+                "-o", cached_file,                  // QR result path
+                "-s", "6",                          // QR image size
+                "-t", file_extension.up (),         // QR format image
+                "--foreground=" + foregroun_hex,    // QR foreground color
+                "--background=" + background_hex    // QR background color
             };
 
             execute_command (application, command);
@@ -41,15 +44,12 @@ public class QRit.QRitUtils {
     public static void save_qr (QRit.Application application) {
         string file_name = application.window.entry_nameqr.get_text ();
         if (file_name == "") {
-            file_name = "Awesome_QR.png";
+            file_name = "Awesome_QR.";
         }
-
-        if (!file_name.has_suffix (".png")) {
-            file_name += ".png";
-        }
+        file_name += file_extension;
 
         string[] command_piped = {
-            "cp", application.cache_folder + "/Awesome_QR.png",
+            "cp", application.cache_folder + "/Awesome_QR." + file_extension,
             GLib.Environment.get_home_dir () + "/" + file_name
         };
 
@@ -98,7 +98,13 @@ public class QRit.QRitUtils {
         ChildWatch.add (child_pid, (pid, status) => {
             // Triggered when the child indicated by child_pid exits
             Process.close_pid (pid);
-            application.window.image_qr.set_from_file (application.cache_folder + "/Awesome_QR.png");
+
+            application.window.image_qr.set_from_file (application.cache_folder + "/Awesome_QR."+file_extension);
+            if (file_extension == "png" || file_extension == "svg") {
+                application.window.label_warning_preview.visible = false;
+            } else {
+                application.window.label_warning_preview.visible = true;
+            }
         });
     }
 
