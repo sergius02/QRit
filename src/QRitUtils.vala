@@ -79,7 +79,7 @@ public class QRit.QRitUtils {
         int child_pid, standard_input, standard_output, standard_error;
         try {
             Process.spawn_async_with_pipes (
-                "$HOME",
+                "/",
                 command,
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
