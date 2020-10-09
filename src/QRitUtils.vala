@@ -146,4 +146,21 @@ public class QRit.QRitUtils {
                     (uint) (rgba.blue * 255));
     }
 
+    public static string read_file (string file_name) {
+        string result = "";
+        File file = File.new_for_path (file_name);
+        try {
+            FileInputStream @is = file.read ();
+            DataInputStream dis = new DataInputStream (@is);
+            string line;
+
+            while ((line = dis.read_line ()) != null) {
+                result += line + "\n";
+            }
+        } catch (Error e) {
+            print ("Error: %s\n", e.message);
+        }
+        return result;
+    }
+
 }

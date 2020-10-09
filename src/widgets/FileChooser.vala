@@ -16,23 +16,9 @@ public class QRit.FileChooser : Gtk.FileChooserDialog {
         add_filter (file_filter);
 
         button_filechooser_open.clicked.connect (() => {
-            string result = "";
-            File file = File.new_for_path (get_filename ());
-            try {
-                FileInputStream @is = file.read ();
-                DataInputStream dis = new DataInputStream (@is);
-                string line;
-
-                while ((line = dis.read_line ()) != null) {
-                    result += line + "\n";
-                }
-            } catch (Error e) {
-                print ("Error: %s\n", e.message);
-            }
-
+            string file_content = QRitUtils.read_file (get_filename ());
             dispose ();
-
-            QRitUtils.generate_qr (application, result);
+            QRitUtils.generate_qr (application, file_content);
         });
 
         button_filechooser_close.clicked.connect (() => {

@@ -10,15 +10,68 @@ public class QRit.Application : Gtk.Application {
     public QRit.ApplicationWindow window;
 
     public static int main (string[] args) {
-        var app = new QRit.Application ();
+        var app = new QRit.Application (args);
         return app.run (args);
     }
 
-    public Application () {
+    public Application (string[] args) {
         Object (
             application_id: "com.github.sergius02.qrit",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.HANDLES_COMMAND_LINE
         );
+    }
+
+    public override int command_line (ApplicationCommandLine command_line) {
+        this.hold ();
+        int res = _command_line (command_line);
+        this.release ();
+        return res;
+    }
+
+    private int _command_line (ApplicationCommandLine command_line) {
+        bool version = false;
+        string file = "";
+        string text = "";
+
+        OptionEntry[] options = new OptionEntry[3];
+        options[0] = {"version", 'v', 0, OptionArg.STRING, ref version, "Version number", null};
+        options[1] = {"file", 'f', 0, OptionArg.FILENAME, ref file, "Absolute path to the file you want to convert into a QR", null};
+        options[2] = {"text", 't', 0, OptionArg.STRING, ref text, "The text you want to convert into a QR", null};
+        // We have to make an extra copy of the array, since .parse assumes
+		// that it can remove strings from the array without freeing them.
+		string[] args = command_line.get_arguments ();
+		string*[] _args = new string[args.length];
+		for (int i = 0; i < args.length; i++) {
+			_args[i] = args[i];
+		}
+
+		try {
+			var opt_context = new OptionContext ("");
+			opt_context.set_help_enabled (true);
+			opt_context.add_main_entries (options, null);
+			unowned string[] tmp = _args;
+			opt_context.parse (ref tmp);
+		} catch (OptionError e) {
+			command_line.print ("error: %s\n", e.message);
+			command_line.print ("Run '%s --help' to see a full list of available command line options.\n", args[0]);
+			return 0;
+		}
+
+		if (version) {
+			command_line.print ("QRit 1.0.4\n");
+			return 0;
+        }
+        if (file != "") {
+            activate ();
+            string file_content = QRitUtils.read_file (file);
+            QRitUtils.generate_qr (this, file_content);
+        }
+        if (text != "") {
+            activate ();
+            QRitUtils.generate_qr (this, text);
+        }
+        
+        return 0;
     }
 
     protected override void activate () {
