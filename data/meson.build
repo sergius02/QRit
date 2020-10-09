@@ -12,6 +12,11 @@ foreach i : icon_sizes
     )
 endforeach
 
+install_data(
+    meson.project_name() + '.contract',
+    install_dir: join_paths(get_option('datadir'), 'contractor')
+)
+
 # Translate and install our .desktop file so the Applications Menu will see it
 i18n.merge_file (
     input: meson.project_name () + '.desktop.in',
