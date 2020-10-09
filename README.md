@@ -13,6 +13,10 @@
 |---------------------|---------------------|
 |![alt](screenshots/QRit3.png) |![alt](screenshots/QRit4.png)|
 
+<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.sergius02.qrit"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</p>
+
 With QRit you can create awesome QR codes 🤖️, you can change the background and foreground color to help you integrate them in any place.
 
 This application use the incredible [qrencode](https://github.com/fukuchi/libqrencode)
@@ -44,6 +48,11 @@ cd build
 ninja
 sudo ninja install
 ```
+
+Important
+>
+>For the file QR generation, the limit is approximately 3KB
+
 
 ## Credits
 

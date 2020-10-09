@@ -1,0 +1,7 @@
+[Contractor Entry]
+Name=Create QR
+Name[es]=Crear QR
+Description=Create a QR with the content of this file
+Description[es]=Crear un QR con el contenido de éste archivo
+MimeType=text/plain;text/html;text/css;text/javascript
+Exec=com.github.sergius02.qrit -f %f

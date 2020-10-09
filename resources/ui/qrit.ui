@@ -60,18 +60,78 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkEntry" id="entry_nameqr">
-                    <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="halign">center</property>
-                    <property name="margin-bottom">15</property>
-                    <property name="hexpand">True</property>
-                    <property name="placeholder-text" translatable="yes">Awesome_QR.png</property>
+                  <object class="GtkLabel" id="label_warning_preview">
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Preview only available for PNG and SVG</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child type="center">
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkEntry" id="entry_nameqr">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="halign">end</property>
+                            <property name="margin-end">5</property>
+                            <property name="placeholder-text" translatable="yes">Awesome_QR</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="combobox_formats">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">start</property>
+                            <property name="margin-start">5</property>
+                            <property name="active">0</property>
+                            <items>
+                              <item id="png">png</item>
+                              <item id="eps">eps</item>
+                              <item id="svg">svg</item>
+                              <item id="ansi" translatable="yes">ansi</item>
+                              <item id="ansi256" translatable="yes">ansi256</item>
+                              <item id="ascii" translatable="yes">ascii</item>
+                              <item id="asciii" translatable="yes">asciii</item>
+                              <item id="utf8" translatable="yes">utf8</item>
+                              <item id="ansiutf8" translatable="yes">ansiutf8</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -161,7 +221,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">2</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
                 <child>
@@ -208,7 +268,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">3</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
               </object>
@@ -221,9 +281,6 @@
           </packing>
         </child>
       </object>
-    </child>
-    <child type="titlebar">
-      <placeholder/>
     </child>
   </template>
 </interface>

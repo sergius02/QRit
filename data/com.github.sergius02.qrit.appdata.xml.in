@@ -72,17 +72,22 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <custom>
-    <value key="x-appcenter-color-primary">#5D6D7E</value>
-    <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+    <value key="x-appcenter-color-primary">#C1FFA5</value>
+    <value key="x-appcenter-color-primary-text">rgb(0,60,210)</value>
     <value key="x-appcenter-suggested-price">0</value>
   </custom>
   <releases>
-    <release version="1.0.5" date="2020-10-07">
+    <release version="1.1.0" date="2020-10-09">
       <description>
-        <p>Arquitectural changes</p>
+        <ul>
+          <li>Arquitectural changes</li>
+          <li>Create QR from files</li>
+          <li>More output formats</li>
+          <li>Create QR from file explorer context menu (in text plain files)</li>
+        </ul>
       </description>
     </release>
-    <release version="1.0.4" date="2020-10-22"/>
+    <release version="1.0.4" date="2020-10-02"/>
     <release version="1.0.3" date="2020-09-23"/>
   </releases>
 </component>
