@@ -13,6 +13,7 @@ public class QRit.QRitUtils {
     */
     public static void generate_qr (QRit.Application application, string qr_content) {
         if (qr_content != "") {
+            application.clean_cache_folder ();
             QRit.QRitUtils.qr_content = qr_content;
             QRit.QRitUtils.file_extension = application.window.combobox_formats.get_active_text ();
             string background_hex = QRit.QRitUtils.to_hex (application.window.background);
@@ -93,19 +94,46 @@ public class QRit.QRitUtils {
             printerr (error.message);
         }
 
-        FileStream command_input = FileStream.fdopen (standard_input, "w");
-        command_input.write (qr_content.data);
+        if (command[0] == "qrencode") { // Is creating QR, write the content to the standard input
+            FileStream command_input = FileStream.fdopen (standard_input, "w");
+            command_input.write (qr_content.data);
+        }
+
         ChildWatch.add (child_pid, (pid, status) => {
             // Triggered when the child indicated by child_pid exits
             Process.close_pid (pid);
 
-            application.window.image_qr.set_from_file (application.cache_folder + "/Awesome_QR."+file_extension);
-            if (file_extension == "png" || file_extension == "svg") {
-                application.window.label_warning_preview.visible = false;
+            IOChannel error = new IOChannel.unix_new (standard_error);
+            string error_message = process_line (error, "stderr");
+            print (error_message);
+            if (error_message == null) {
+                application.window.image_qr.set_from_file (application.cache_folder + "/Awesome_QR."+file_extension);
+                if (file_extension == "png" || file_extension == "svg") {
+                    application.window.label_warning_preview.visible = false;
+                } else {
+                    application.window.label_warning_preview.set_text ("Preview only available for PNG and SVG");
+                    application.window.label_warning_preview.visible = true;
+                }
             } else {
+                application.window.image_qr.set_from_icon_name ("dialog-error-symbolic", Gtk.IconSize.DIALOG);
+                application.window.label_warning_preview.set_text (error_message);
                 application.window.label_warning_preview.visible = true;
             }
         });
+    }
+
+    private static string process_line (IOChannel channel, string stream_name) {
+        try {
+            string line;
+            channel.read_line (out line, null, null);
+            return line;
+        } catch (IOChannelError e) {
+            print ("%s: IOChannelError: %s\n", stream_name, e.message);
+            return "";
+        } catch (ConvertError e) {
+            print ("%s: ConvertError: %s\n", stream_name, e.message);
+            return "";
+        }
     }
 
     /**
