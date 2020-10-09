@@ -60,15 +60,15 @@ public class QRit.Application : Gtk.Application {
 		if (version) {
 			command_line.print ("QRit 1.0.4\n");
 			return 0;
-        }
-        if (file != "") {
+        } else if (file != "") {
             activate ();
             string file_content = QRitUtils.read_file (file);
             QRitUtils.generate_qr (this, file_content);
-        }
-        if (text != "") {
+        } else if (text != "") {
             activate ();
             QRitUtils.generate_qr (this, text);
+        } else {
+            activate ();
         }
         
         return 0;
