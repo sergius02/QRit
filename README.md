@@ -33,16 +33,26 @@ Ensure you have these dependencies installed
 ## Install, build and run
 
 ```bash
-# install elementary-sdk, meson and ninja
-sudo apt install elementary-sdk meson ninja
+# FOR ELEMENTARY OS USERS
+sudo apt install elementary-sdk
+# FOR THE REST
+sudo apt install cmake libgtk3-dev gettext
+
+# install meson and ninja
+sudo apt install meson ninja-build
+
 # install qrencode
 sudo apt install qrencode
+
 # clone repository
 git clone https://github.com/sergius02/QRit QRit
+
 # cd to dir
 cd QRit
+
 # run meson
 meson build --prefix=/usr
+
 # cd to build, build and test
 cd build
 ninja
