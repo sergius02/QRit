@@ -35,8 +35,9 @@ Ensure you have these dependencies installed
 ```bash
 # FOR ELEMENTARY OS USERS
 sudo apt install elementary-sdk
+
 # FOR THE REST
-sudo apt install cmake libgtk3-dev gettext
+sudo apt install cmake libgtk-3-dev gettext
 
 # install meson and ninja
 sudo apt install meson ninja-build
@@ -53,9 +54,13 @@ cd QRit
 # run meson
 meson build --prefix=/usr
 
-# cd to build, build and test
+# cd to build
 cd build
+
+# build
 ninja
+
+# install
 sudo ninja install
 ```
 
