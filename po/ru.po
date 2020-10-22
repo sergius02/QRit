@@ -1,1 +1,100 @@
+# Russian translations for com.github.sergius02.qrit package.
+# Copyright (C) 2020 THE com.github.sergius02.qrit'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.qrit package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.qrit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-08 17:43+0200\n"
+"PO-Revision-Date: 2020-09-08 16:10+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: src/Application.vala:52 data/com.github.sergius02.qrit.appdata.xml.in:7
+#: data/com.github.sergius02.qrit.desktop.in:4
+msgid "QRit"
+msgstr "QRit"
+
+#: src/QRitUtils.vala:24
+msgid "You must enter a content to that QR!"
+msgstr "Вы должны ввести данные для создания QR"
+
+#: src/QRitUtils.vala:37
+msgid "QR saved at your home directory"
+msgstr "QR-код сохранён в папку home"
+
+#: src/QRitUtils.vala:40
+msgid "You must give an awesome name to that QR!"
+msgstr "DВы должны дать этому QR-коду классное имя!"
+
+#: src/QRitUtils.vala:49
+msgid "Your QR is in your clipboard now!"
+msgstr "Ваш QR-код сейчас в буфере обмена!"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:8
+msgid "QR codes creator"
+msgstr "Генератор QR-кодов"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:10
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
+msgstr "Создавайте потрясающие QR-коды с QRit!"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:15
+msgid "Sergio Fernández Celorio"
+msgstr "Sergio Fernández Celorio"
+
+#: data/com.github.sergius02.qrit.desktop.in:6
+msgid "QR codes generator"
+msgstr "Генератор QR-кодов"
+
+#: data/com.github.sergius02.qrit.desktop.in:8
+msgid "com.github.sergius02.qrit"
+msgstr "com.github.sergius02.qrit"
+
+#: data/com.github.sergius02.qrit.desktop.in:11
+msgid "Utility"
+msgstr "Утилиты"
+
+#: resources/ui/qrit.glade:44
+msgid "Use the text field above to create a new awesome QR code 🤖️"
+msgstr "Используйте текстовое поле выше, чтобы создать новый потрясающий QR-код. 🤖️"
+
+#: resources/ui/qrit.glade:83
+msgid "Awesome_QR.png"
+msgstr "Отличный_QR.png"
+
+#: resources/ui/qrit.glade:107 resources/ui/qrit.glade:120
+msgid "Background"
+msgstr "Задний план"
+
+#: resources/ui/qrit.glade:145
+msgid "Foreground"
+msgstr "Передний план"
+
+#: resources/ui/qrit.glade:158
+msgid "QR color"
+msgstr "Цвет QR-кода"
+
+#: resources/ui/qrit.glade:176
+msgid "Regenerate it!"
+msgstr "Восстановить!"
+
+#: resources/ui/qrit.glade:209
+msgid "Copy QR"
+msgstr "Скопировать QR-код"
+
+#: resources/ui/qrit.glade:224
+msgid "Save QR"
+msgstr "Сохранить QR-код"
+
+#: resources/ui/qrit.glade:293
+msgid "Fork me on Github!"
+msgstr "Fork me on Github!"
