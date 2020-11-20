@@ -16,7 +16,7 @@
             <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_filechooser_close">
-                <property name="label" translatable="yes">Cancelar</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
@@ -29,7 +29,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_filechooser_open">
-                <property name="label" translatable="yes">Abrir</property>
+                <property name="label" translatable="yes">Open</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
