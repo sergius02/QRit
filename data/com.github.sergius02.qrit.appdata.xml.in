@@ -77,6 +77,20 @@
     <value key="x-appcenter-suggested-price">0</value>
   </custom>
   <releases>
+    <release version="1.1.2" date="2020-12-05">
+      <description>
+        <ul>
+          <li>🐛 Bug Fix</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.1" date="2020-11-18">
+      <description>
+        <ul>
+          <li>🌐 Added russian translate, thanks to Dmitry Logvinov (https://github.com/logdimov)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2020-10-09">
       <description>
         <ul>

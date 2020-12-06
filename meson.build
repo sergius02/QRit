@@ -2,7 +2,7 @@
 project (
     'com.github.sergius02.qrit',
     'vala', 'c',
-    version: '1.1.0'
+    version: '1.1.2'
 )
 
 # Translation module

@@ -1,3 +1,11 @@
+com.github.sergius02.qrit (1.1.2) RELEASED; urgency=low
+
+  * Bug fix
+
+com.github.sergius02.qrit (1.1.1) RELEASED; urgency=low
+
+  * Added russian translate, thanks to Dmitry Logvinov (https://github.com/logdimov)
+
 com.github.sergius02.qrit (1.1.0) RELEASED; urgency=low
 
   * Arquitectural changes
