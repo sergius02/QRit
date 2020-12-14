@@ -7,9 +7,8 @@
   <name>QRit</name>
   <summary>QR codes creator</summary>
   <description>
-    <p>Create awesome QR codes with QRit!</p>
-    <p>With QRit you can create awesome QR codes, you can change the background and foreground color to help you integrate them in any place.</p>
-    <p>This application use the incredible qrencode</p>
+    <p>With QRit you can create custom QR codes!. You can change the background and foreground color to help you integrate them in any place.</p>
+    <p>This application use the incredible qrencode.</p>
   </description>
   <categories>
 ​    <category>GTK</category>
@@ -87,7 +86,7 @@
     <release version="1.1.1" date="2020-11-18">
       <description>
         <ul>
-          <li>🌐 Added russian translate, thanks to Dmitry Logvinov (https://github.com/logdimov)</li>
+          <li>🌐 Added russian translate, thanks to Dmitry Logvinov (@logdimov)</li>
         </ul>
       </description>
     </release>
