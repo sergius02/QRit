@@ -1,5 +1,5 @@
 # Install icons
-icon_sizes = ['16', '32', '48', '64', '128']
+icon_sizes = ['32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data (
@@ -11,6 +11,11 @@ foreach i : icon_sizes
         install_dir: join_paths (get_option ('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
 endforeach
+
+install_data (
+    join_paths ('icons', 16, meson.project_name () + '-symbolic.svg'),
+    install_dir: join_paths (get_option ('datadir'), 'icons', 'hicolor', 'symbolic', 'apps')
+)
 
 install_data(
     meson.project_name() + '.contract',
