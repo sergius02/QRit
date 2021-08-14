@@ -11,8 +11,8 @@
     <p>This application use the incredible qrencode.</p>
   </description>
   <categories>
-​    <category>GTK</category>
-​    <category>Utility</category>
+    <category>GTK</category>
+    <category>Utility</category>
     <category>Development</category>
     <category>Network</category>
   </categories>
