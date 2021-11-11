@@ -1,5 +1,5 @@
 build/
 .vscode/
+.flatpak-builder
 
-*.glade~
-*.ui~
+*~
