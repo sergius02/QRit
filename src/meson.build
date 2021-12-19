@@ -2,8 +2,7 @@
 sources = files (
     'Application.vala',
     'QRitUtils.vala',
-    
+
     'widgets/Window.vala',
     'widgets/HeaderBar.vala',
-    'widgets/FileChooser.vala'
 )
