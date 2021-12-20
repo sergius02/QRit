@@ -18,7 +18,7 @@ public class QRit.QRitUtils {
             QRit.QRitUtils.file_extension = application.window.combobox_formats.get_active_text ();
             string background_hex = QRit.QRitUtils.to_hex (application.window.background);
             string foregroun_hex = QRit.QRitUtils.to_hex (application.window.foreground);
-            
+
             string cached_file = application.cache_folder + "/Awesome_QR." + file_extension;
             string[] command = {
                 "qrencode",                         // Base command
@@ -39,7 +39,7 @@ public class QRit.QRitUtils {
         }
     }
 
-    /** 
+    /**
     * Save the QR to the $HOME folder
     */
     public static void save_qr (QRit.Application application) {
