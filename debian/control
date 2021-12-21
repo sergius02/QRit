@@ -8,8 +8,15 @@ Build-Depends: libgtk-3-dev,
                meson,
                debhelper (>= 9)
 Standards-Version: 3.9.3
+Vcs-Browser: https://github.com/sergius02/QRit
+Vcs-Git: https://github.com/sergius02/QRit.git
+Homepage: https://github.com/sergius02/QRit
 
 Package: com.github.sergius02.qrit
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, qrencode
+Depends: ${misc:Depends}, ${shlibs:Depends}, qrencode, fonts-noto-color-emoji
 Description: Create awesome QR codes with QRit!
+ With QRit you can create awesome QR codes, you can change the background 
+ and foreground color to help you integrate them in any place.
+ .
+ This application uses the incredible qrencode.
