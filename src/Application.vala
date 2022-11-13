@@ -10,6 +10,11 @@ public class QRit.Application : Gtk.Application {
     public QRit.ApplicationWindow window;
 
     public static int main (string[] args) {
+        GLib.Intl.setlocale (LocaleCategory.ALL, "");
+        GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+        GLib.Intl.textdomain (Constants.GETTEXT_PACKAGE);
+
         var app = new QRit.Application (args);
         return app.run (args);
     }

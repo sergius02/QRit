@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.sergius02.qrit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 17:43+0200\n"
+"POT-Creation-Date: 2022-11-13 22:12+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Application.vala:52 data/com.github.sergius02.qrit.appdata.xml.in:7
-#: data/com.github.sergius02.qrit.desktop.in:4
+#: data/com.github.sergius02.qrit.appdata.xml.in:7
+#: data/com.github.sergius02.qrit.desktop.in:4 src/Application.vala:83
 msgid "QRit"
-msgstr ""
-
-#: src/QRitUtils.vala:24
-msgid "You must enter a content to that QR!"
-msgstr ""
-
-#: src/QRitUtils.vala:37
-msgid "QR saved at your home directory"
-msgstr ""
-
-#: src/QRitUtils.vala:40
-msgid "You must give an awesome name to that QR!"
-msgstr ""
-
-#: src/QRitUtils.vala:49
-msgid "Your awesome QR is in your clipboard now!"
 msgstr ""
 
 #: data/com.github.sergius02.qrit.appdata.xml.in:8
@@ -43,58 +27,146 @@ msgid "QR codes creator"
 msgstr ""
 
 #: data/com.github.sergius02.qrit.appdata.xml.in:10
-#: data/com.github.sergius02.qrit.desktop.in:5
-msgid "Create awesome QR codes with QRit!"
+msgid ""
+"With QRit you can create custom QR codes!. You can change the background and "
+"foreground color to help you integrate them in any place."
 msgstr ""
 
-#: data/com.github.sergius02.qrit.appdata.xml.in:15
+#: data/com.github.sergius02.qrit.appdata.xml.in:11
+msgid "This application use the incredible qrencode."
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:22
 msgid "Sergio Fernández Celorio"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:28
+#: data/com.github.sergius02.qrit.appdata.xml.in:32
+#: data/com.github.sergius02.qrit.appdata.xml.in:36
+#: data/com.github.sergius02.qrit.appdata.xml.in:40
+msgid "Normal variant"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:82
+msgid "✨ Use FileChooserNative to allow for tighter sandboxing"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:89
+msgid "📦️ Flatpak packaging!"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:96
+msgid "🐛 Bug Fix"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:103
+msgid "🌐 Added russian translate, thanks to Dmitry Logvinov (@logdimov)"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:110
+msgid "Architectural changes"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:111
+msgid "Create QR from files"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:112
+msgid "More output formats"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:113
+msgid "Create QR from file explorer context menu (in text plain files)"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
 msgstr ""
 
 #: data/com.github.sergius02.qrit.desktop.in:6
 msgid "QR codes generator"
 msgstr ""
 
-#: data/com.github.sergius02.qrit.desktop.in:8
-msgid "com.github.sergius02.qrit"
-msgstr ""
-
 #: data/com.github.sergius02.qrit.desktop.in:11
-msgid "Utility"
+msgid "Utility;GTK;Network;Development;QR;"
 msgstr ""
 
-#: resources/ui/qrit.glade:44
+#: resources/ui/headerbar.ui:73
+msgid "Fork me on Github!"
+msgstr ""
+
+#: resources/ui/qrit.ui:30
 msgid "Use the text field above to create a new awesome QR code 🤖️"
 msgstr ""
 
-#: resources/ui/qrit.glade:83
-msgid "Awesome_QR.png"
+#: resources/ui/qrit.ui:65
+msgid "Preview only available for PNG and SVG"
 msgstr ""
 
-#: resources/ui/qrit.glade:107 resources/ui/qrit.glade:120
+#: resources/ui/qrit.ui:87
+msgid "Awesome_QR"
+msgstr ""
+
+#: resources/ui/qrit.ui:106
+msgid "ansi"
+msgstr ""
+
+#: resources/ui/qrit.ui:107
+msgid "ansi256"
+msgstr ""
+
+#: resources/ui/qrit.ui:108
+msgid "ascii"
+msgstr ""
+
+#: resources/ui/qrit.ui:109
+msgid "asciii"
+msgstr ""
+
+#: resources/ui/qrit.ui:110
+msgid "utf8"
+msgstr ""
+
+#: resources/ui/qrit.ui:111
+msgid "ansiutf8"
+msgstr ""
+
+#: resources/ui/qrit.ui:153 resources/ui/qrit.ui:166
 msgid "Background"
 msgstr ""
 
-#: resources/ui/qrit.glade:145
+#: resources/ui/qrit.ui:191
 msgid "Foreground"
 msgstr ""
 
-#: resources/ui/qrit.glade:158
+#: resources/ui/qrit.ui:204
 msgid "QR color"
 msgstr ""
 
-#: resources/ui/qrit.glade:176
-msgid "Regenerate it!"
-msgstr ""
-
-#: resources/ui/qrit.glade:209
+#: resources/ui/qrit.ui:239
 msgid "Copy QR"
 msgstr ""
 
-#: resources/ui/qrit.glade:224
+#: resources/ui/qrit.ui:254
 msgid "Save QR"
 msgstr ""
 
-#: resources/ui/qrit.glade:293
-msgid "Fork me on Github!"
+#: src/QRitUtils.vala:37
+msgid "You must enter a content to that QR!"
+msgstr ""
+
+#: src/QRitUtils.vala:58
+msgid "QR saved at your home directory"
+msgstr ""
+
+#: src/QRitUtils.vala:69
+msgid "Your QR is in your clipboard now!"
+msgstr ""
+
+#: src/widgets/HeaderBar.vala:39
+msgid "Open"
+msgstr ""
+
+#: src/widgets/HeaderBar.vala:40
+msgid "Cancel"
 msgstr ""
