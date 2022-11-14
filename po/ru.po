@@ -114,7 +114,7 @@ msgstr "Превью доступно только для PNG и SVG"
 
 #: resources/ui/qrit.ui:87
 msgid "Awesome_QR"
-msgstr "Отличный_QR.png"
+msgstr "Отличный_QR"
 
 #: resources/ui/qrit.ui:106
 msgid "ansi"
