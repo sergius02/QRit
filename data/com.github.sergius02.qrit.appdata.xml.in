@@ -107,7 +107,7 @@
     <release version="1.1.0" date="2020-10-09">
       <description>
         <ul>
-          <li>Arquitectural changes</li>
+          <li>Architectural changes</li>
           <li>Create QR from files</li>
           <li>More output formats</li>
           <li>Create QR from file explorer context menu (in text plain files)</li>

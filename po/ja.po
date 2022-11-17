@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.sergius02.qrit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 10:38+0900\n"
+"POT-Creation-Date: 2022-11-13 22:12+0900\n"
 "PO-Revision-Date: 2020-10-07 10:50+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/com.github.sergius02.qrit.appdata.xml.in:7
-#: data/com.github.sergius02.qrit.desktop.in:4 src/Application.vala:24
+#: data/com.github.sergius02.qrit.desktop.in:4 src/Application.vala:83
 msgid "QRit"
 msgstr "QRit"
 
@@ -27,90 +27,158 @@ msgid "QR codes creator"
 msgstr "QR コードを作成します"
 
 #: data/com.github.sergius02.qrit.appdata.xml.in:10
-#: data/com.github.sergius02.qrit.desktop.in:5
-msgid "Create awesome QR codes with QRit!"
-msgstr "QRit で QR コードを作成しましょう！"
-
-#: data/com.github.sergius02.qrit.appdata.xml.in:11
+#, fuzzy
 msgid ""
-"With QRit you can create awesome QR codes, you can change the background and "
+"With QRit you can create custom QR codes!. You can change the background and "
 "foreground color to help you integrate them in any place."
 msgstr ""
 "QRit を使用すれば、QR コードを作成したり、使用場所にマッチするように背景色や"
 "コードの色を変更したりできます。"
 
-#: data/com.github.sergius02.qrit.appdata.xml.in:12
-msgid "This application use the incredible qrencode"
+#: data/com.github.sergius02.qrit.appdata.xml.in:11
+#, fuzzy
+msgid "This application use the incredible qrencode."
 msgstr "このアプリケーションは qrencode を使用しています"
 
-#: data/com.github.sergius02.qrit.appdata.xml.in:23
+#: data/com.github.sergius02.qrit.appdata.xml.in:22
 msgid "Sergio Fernández Celorio"
 msgstr "Sergio Fernández Celorio"
 
-#: data/com.github.sergius02.qrit.appdata.xml.in:29
-#: data/com.github.sergius02.qrit.appdata.xml.in:33
-#: data/com.github.sergius02.qrit.appdata.xml.in:37
-#: data/com.github.sergius02.qrit.appdata.xml.in:41
+#: data/com.github.sergius02.qrit.appdata.xml.in:28
+#: data/com.github.sergius02.qrit.appdata.xml.in:32
+#: data/com.github.sergius02.qrit.appdata.xml.in:36
+#: data/com.github.sergius02.qrit.appdata.xml.in:40
 msgid "Normal variant"
 msgstr "QR コードの色の例"
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:82
+msgid "✨ Use FileChooserNative to allow for tighter sandboxing"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:89
+msgid "📦️ Flatpak packaging!"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:96
+msgid "🐛 Bug Fix"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:103
+msgid "🌐 Added russian translate, thanks to Dmitry Logvinov (@logdimov)"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:110
+msgid "Architectural changes"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:111
+msgid "Create QR from files"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:112
+msgid "More output formats"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.appdata.xml.in:113
+msgid "Create QR from file explorer context menu (in text plain files)"
+msgstr ""
+
+#: data/com.github.sergius02.qrit.desktop.in:5
+msgid "Create awesome QR codes with QRit!"
+msgstr "QRit で QR コードを作成しましょう！"
 
 #: data/com.github.sergius02.qrit.desktop.in:6
 msgid "QR codes generator"
 msgstr "QR コード生成ツール"
 
-#: data/com.github.sergius02.qrit.desktop.in:8
-msgid "com.github.sergius02.qrit"
-msgstr "com.github.sergius02.qrit"
-
 #: data/com.github.sergius02.qrit.desktop.in:11
 msgid "Utility;GTK;Network;Development;QR;"
 msgstr "Utility;GTK;Network;Development;QR;ユーティリティー;ネットワーク;開発;"
 
-#: resources/ui/qrit.glade:39
+#: resources/ui/headerbar.ui:73
+msgid "Fork me on Github!"
+msgstr "GitHub でフォーク"
+
+#: resources/ui/qrit.ui:30
 msgid "Use the text field above to create a new awesome QR code 🤖️"
 msgstr ""
 "新しい QR コードを作成するには、上のテキストフィールドを使用してください 🤖️"
 
-#: resources/ui/qrit.glade:78
-msgid "Awesome_QR.png"
+#: resources/ui/qrit.ui:65
+msgid "Preview only available for PNG and SVG"
+msgstr ""
+
+#: resources/ui/qrit.ui:87
+#, fuzzy
+msgid "Awesome_QR"
 msgstr "Awesome_QR.png"
 
-#: resources/ui/qrit.glade:102 resources/ui/qrit.glade:115
+#: resources/ui/qrit.ui:106
+msgid "ansi"
+msgstr ""
+
+#: resources/ui/qrit.ui:107
+msgid "ansi256"
+msgstr ""
+
+#: resources/ui/qrit.ui:108
+msgid "ascii"
+msgstr ""
+
+#: resources/ui/qrit.ui:109
+msgid "asciii"
+msgstr ""
+
+#: resources/ui/qrit.ui:110
+msgid "utf8"
+msgstr ""
+
+#: resources/ui/qrit.ui:111
+msgid "ansiutf8"
+msgstr ""
+
+#: resources/ui/qrit.ui:153 resources/ui/qrit.ui:166
 msgid "Background"
 msgstr "背景色"
 
-#: resources/ui/qrit.glade:140
+#: resources/ui/qrit.ui:191
 msgid "Foreground"
 msgstr "QR コードの色"
 
-#: resources/ui/qrit.glade:153
+#: resources/ui/qrit.ui:204
 msgid "QR color"
 msgstr "QR コードの色を選択"
 
-#: resources/ui/qrit.glade:188
+#: resources/ui/qrit.ui:239
 msgid "Copy QR"
 msgstr "QR コードをコピー"
 
-#: resources/ui/qrit.glade:203
+#: resources/ui/qrit.ui:254
 msgid "Save QR"
 msgstr "QR コードを保存"
 
-#: resources/ui/qrit.glade:272
-msgid "Fork me on Github!"
-msgstr "GitHub でフォーク"
-
-#: src/QRitUtils.vala:24
+#: src/QRitUtils.vala:37
 msgid "You must enter a content to that QR!"
 msgstr "QR コードの内容を入力してください！"
 
-#: src/QRitUtils.vala:37
+#: src/QRitUtils.vala:58
 msgid "QR saved at your home directory"
 msgstr "QR コードをホームディレクトリーに保存しました"
 
-#: src/QRitUtils.vala:40
-msgid "You must give an awesome name to that QR!"
-msgstr "QR コードに名前を付けてください！"
-
-#: src/QRitUtils.vala:49
+#: src/QRitUtils.vala:69
 msgid "Your QR is in your clipboard now!"
 msgstr "QR コードをコピーしました！"
+
+#: src/widgets/HeaderBar.vala:39
+msgid "Open"
+msgstr ""
+
+#: src/widgets/HeaderBar.vala:40
+msgid "Cancel"
+msgstr ""
+
+#~ msgid "com.github.sergius02.qrit"
+#~ msgstr "com.github.sergius02.qrit"
+
+#~ msgid "You must give an awesome name to that QR!"
+#~ msgstr "QR コードに名前を付けてください！"
